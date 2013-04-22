@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Questionnaire</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+		<h1>Wufoo!</h1>
+	</header>
+<!--add any flash message to output once-->
+<% if flash.any? %>
+  <div style="background: green;"><%= flash[:success] %> </div>
+<% end %>
+<%= yield %>
+
+<footer>
+	&copy; 2013
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<h1>Hello World</h1>
+
+<%= "my name is James".titleize.gsub("a", "4").split(" ") %>
+<p><%= @message %></p>
+<h2>Competition</h2>
+<ul>
+	<li> Sev got <%= @sev_votes %> votes</li>
+	<li> Mark got <%= @mark_votes %> votes</li>
+</ul>
+<h2>Steer is <%= @list.size %> people</h2>
+<ul>
+	<% @list.each do |person| %>
+		<li>Person: <%= person %></li>
+	<% end %>	
+</ul>
+<h2> Form responses </h2>
+<ul>
+  <% @forms.each { |form| %>
+  	<li><%= link_to form.name, form_path(form) %> </li>
+  <% } %>
+</ul>
+
+<p><%= link_to "New reponse", new_form_path %></p>

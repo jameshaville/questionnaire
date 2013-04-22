@@ -1,0 +1,5 @@
+<h2><%= @form.name %></h2>
+<p><%= @form.email %></p>
+<p><%= link_to "All responses", forms_path %></p>
+<p><%= link_to "Edit", edit_form_path(@form) %></p>
+<p><%= link_to "Delete", form_path(@form), method: :delete, confirm: "Are you sure?" %></p>
