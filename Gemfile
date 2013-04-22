@@ -7,8 +7,10 @@ gem 'rails', '3.2.11'
 
 gem 'sqlite3'
 
-gem 'simple_form'
-
+group :development do
+  gem 'simple_form'
+end
+ 
 group :production do
 	gem 'pg'
 end
